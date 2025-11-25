@@ -19,6 +19,16 @@ export class Task {
         });
     }
 
+    public static with(task : TaskProps){
+        return new Task({
+            id: task.id,
+            title: task.title,
+            description : task.description,
+            status : task.status,
+            created: task.created
+        });
+    }
+
     public get id(){
         return this.props.id;
     }

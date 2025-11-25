@@ -1,6 +1,5 @@
-import { TaskRepositoryContract } from "../../../contracts/task/TaskRepositoryContract ";
-import { ListOutputDto, TaskServiceContract } from "../../../contracts/task/TaskServiceContract";
-import { Task } from "../../entities/Task";
+import { TaskRepositoryContract } from "../../contracts/task/TaskRepositoryContract ";
+import { ListOutputDto, TaskServiceContract } from "../../contracts/task/TaskServiceContract";
 
 export class TaskService implements TaskServiceContract{
     
