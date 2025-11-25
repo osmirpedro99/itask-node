@@ -5,7 +5,7 @@ export type ListOutputDto = {
         description: string;
         status: 'PENDING' | 'COMPLETED';
         created: Date;
-    }
+    }[];
 }
 
 export interface TaskServiceContract {
