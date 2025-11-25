@@ -1,7 +1,7 @@
 export type TaskProps = {
     id : string;
     title : string;
-    description?: string;
+    description: string;
     status : 'PENDING' | 'COMPLETED';
     created: Date;
 }
@@ -9,21 +9,21 @@ export type TaskProps = {
 export class Task {
     private constructor(readonly props : TaskProps){}
 
-    public create(title:string, description:string, status:'PENDING' | 'COMPLETED'){
+    public static create(title:string, description:string, status:'PENDING' | 'COMPLETED'){
         return new Task({
-            id: crypto.getRandomValues.toString(),
+            id: crypto.randomUUID(),
             title,
             description,
             status,
             created: new Date()
-        })
+        });
     }
 
     public get id(){
         return this.props.id;
     }
 
-    public get name(){
+    public get title(){
         return this.props.title;
     }
 
